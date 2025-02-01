@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,9 +8,11 @@ const NavBar = () => {
     <nav className="bg-gradient-to-r from-teal-500 to-cyan-600 p-4 shadow-lg relative border-b-2 border-white w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto flex justify-between items-center w-full">
         {/* Logo */}
-        <span className="text-white text-2xl font-semibold tracking-wide uppercase">
-          Paulina Lopez
-        </span>
+        <NavLink to="/">
+          <span className="text-white text-2xl font-semibold tracking-wide uppercase">
+            Paulina Lopez
+          </span>
+        </NavLink>
 
         {/* Menu Button (Mobile) */}
         <button
@@ -26,12 +29,18 @@ const NavBar = () => {
           }`}
         >
           <li>
-            <a
-              href="#"
-              className="flex items-center text-gray-800 md:text-white text-lg font-medium px-4 py-2 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white transition-all duration-300 rounded-lg"
+            <NavLink
+              to="/aboutme"
+              className={({ isActive }) =>
+                `flex items-center text-lg font-medium px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white ${
+                  isActive
+                    ? "text-white bg-cyan-500"
+                    : "text-gray-800 md:text-white"
+                }`
+              }
             >
-              ✨ Quién Soy
-            </a>
+              👩🏻‍⚕️ Quién Soy
+            </NavLink>
           </li>
           <li>
             <a
