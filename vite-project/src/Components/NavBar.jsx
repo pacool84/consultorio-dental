@@ -1,28 +1,61 @@
+import { useState } from "react";
+
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-[#008c95] p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <span className="text-white text-xl font-bold">LOGO Paulina Lopez</span>
-        <ul className="flex space-x-4">
+    <nav className="bg-gradient-to-r from-teal-500 to-cyan-600 p-4 shadow-lg relative border-b-2 border-white w-full fixed top-0 left-0 z-50">
+      <div className="container mx-auto flex justify-between items-center w-full">
+        {/* Logo */}
+        <span className="text-white text-2xl font-semibold tracking-wide uppercase">
+          Paulina Lopez
+        </span>
+
+        {/* Menu Button (Mobile) */}
+        <button
+          className="text-white md:hidden focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? "✖" : "☰"}
+        </button>
+
+        {/* Menu Items */}
+        <ul
+          className={`md:flex md:space-x-6 absolute md:static top-16 right-0 w-full md:w-auto bg-white md:bg-transparent p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 ease-in-out ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
           <li>
-            <span className="text-white hover:underline cursor-pointer">
-              Quien Soy
-            </span>
+            <a
+              href="#"
+              className="flex items-center text-gray-800 md:text-white text-lg font-medium px-4 py-2 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white transition-all duration-300 rounded-lg"
+            >
+              ✨ Quién Soy
+            </a>
           </li>
           <li>
-            <span className="text-white hover:underline cursor-pointer">
-              Servicios
-            </span>
+            <a
+              href="#"
+              className="flex items-center text-gray-800 md:text-white text-lg font-medium px-4 py-2 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white transition-all duration-300 rounded-lg"
+            >
+              🦷 Servicios
+            </a>
           </li>
           <li>
-            <span className="text-white hover:underline cursor-pointer">
-              Promociones
-            </span>
+            <a
+              href="#"
+              className="flex items-center text-gray-800 md:text-white text-lg font-medium px-4 py-2 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white transition-all duration-300 rounded-lg"
+            >
+              🎁 Promociones
+            </a>
           </li>
           <li>
-            <span className="text-white hover:underline cursor-pointer">
-              Citas en Línea
-            </span>
+            <a
+              href="#"
+              className="flex items-center text-gray-800 md:text-white text-lg font-medium px-4 py-2 hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:text-white transition-all duration-300 rounded-lg"
+            >
+              📅 Citas en Línea
+            </a>
           </li>
         </ul>
       </div>
