@@ -5,6 +5,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    //Considerar cambiar propiedad relative por fixed para que el NavBar se mantenga fijo en la parte superior de la pantalla y ocupe todo el ancho de la misma.
     <nav className="bg-gradient-to-r from-teal-500 to-cyan-600 p-4 shadow-lg relative border-b-2 border-white w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto flex justify-between items-center w-full">
         {/* Logo */}
