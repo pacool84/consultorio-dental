@@ -6,6 +6,7 @@ const AboutMe = () => {
       {/* Contenedor de imagen y descripción */}
       <div className="flex flex-col md:flex-row items-center justify-between mb-16">
         {/* Imagen como tarjeta con filtro de brillo */}
+
         <div className="relative w-64 h-84 rounded-lg shadow-xl overflow-hidden mb-8 md:mb-0">
           <img
             src={aboutMePicture}
@@ -15,32 +16,33 @@ const AboutMe = () => {
         </div>
 
         {/* Sección Descripción de mi pasión por la odontología (pegada a la derecha) */}
-        <article className="md:w-2/3 md:text-right">
-          <h2 className="text-2xl font-semibold mb-4">
-            Descripción de mi pasión por la odontología
-          </h2>
+        <article className=" relative md:w-2/3 md:text-right">
+          <h2 className="text-2xl font-semibold mb-4">Mi Pasión</h2>
+          <div className="absolute top-0 -right-4 w-full h-full bg-cyan-600  mix-blend-multiply filter blur-3xl opacity-35 "></div>
           <p className="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            convallis nunc vitae est placerat, in cursus enim viverra. Donec
-            fringilla nisl et orci vehicula, vel fermentum ligula facilisis.
-            Suspendisse hendrerit mollis orci in faucibus. Nunc auctor metus ut
-            risus iaculis elementum.
+            Soy odontóloga por vocación, con más de 22 años de entrega y
+            compromiso en devolver la confianza a cada sonrisa. Especialista en
+            ortodoncia, con un diplomado en endodoncia por la UNAM y formación
+            en armonización facial y estética dental, mi misión es fusionar la
+            salud bucal con la belleza, creando sonrisas que no solo luzcan
+            increíbles, sino que reflejen bienestar y seguridad.
           </p>
         </article>
       </div>
 
       {/* Sección Misión */}
-      <article className="mb-12 text-left">
+      <article className=" relative mb-12 text-left">
         <h2 className="text-2xl font-semibold mb-4">Misión</h2>
+        <div className="absolute top-0 -right-4 w-full h-full bg-cyan-600  mix-blend-multiply filter blur-3xl opacity-35 "></div>
         <p className="text-gray-700 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          elementum tristique quam, eu posuere ex dapibus et. Aliquam erat
-          volutpat. Sed feugiat vitae eros in finibus. Mauris non enim erat.
-          Proin luctus quis magna nec lacinia. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Phasellus convallis nunc vitae est
-          placerat, in cursus enim viverra. Donec fringilla nisl et orci
-          vehicula, vel fermentum ligula facilisis. Suspendisse hendrerit mollis
-          orci in faucibus. Nunc auctor metus ut risus iaculis elementum.
+          Mi propósito es transformar vidas a través de la odontología,
+          brindando a cada paciente una experiencia de atención personalizada,
+          cálida y de calidad. Mi compromiso es fusionar ciencia, arte y
+          tecnología para ofrecer tratamientos que no solo restauren la
+          funcionalidad dental, sino que también realcen la belleza natural de
+          cada sonrisa. Con una visión integral de la salud bucodental, trabajo
+          para generar confianza, bienestar y felicidad en cada persona que
+          confía en mis manos.
         </p>
       </article>
 
