@@ -29,7 +29,7 @@ const Carrousel = ({ images = defaultImages }) => {
   return (
     <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
+        className="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 sm:p-2 rounded-full z-10"
         onClick={prevSlide}
       >
         ‹
@@ -49,18 +49,18 @@ const Carrousel = ({ images = defaultImages }) => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
+        className="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 sm:p-2 rounded-full z-10"
         onClick={nextSlide}
       >
         ›
       </button>
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-1 sm:space-x-2 md:space-x-3">
         {images.map((_, index) => (
           <div
             key={index}
-            className={`h-3 w-3 rounded-full mx-1 ${
+            className={`rounded-full ${
               index === currentIndex ? "bg-sky-500" : "bg-slate-300"
-            }`}
+            } h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4`}
           ></div>
         ))}
       </div>
