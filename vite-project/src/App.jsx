@@ -4,6 +4,7 @@ import { useRoutes, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import NavBar from "./Components/NavBar";
 import AboutMe from "./Pages/AboutMe";
+import Footer from "./Components/Footer";
 import "./App.css";
 
 const AppRoutes = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <BrowserRouter>
       <NavBar />
       <AppRoutes />
+      <Footer /> {/* Agregar el Footer aquí */}
     </BrowserRouter>
   );
 };
