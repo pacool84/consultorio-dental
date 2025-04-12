@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaUserMd, FaTooth, FaGift, FaCalendarAlt } from "react-icons/fa"; // Importar íconos de react-icons
+import { FaUserMd, FaTooth, FaGift, FaCalendarAlt } from "react-icons/fa";
+import logo from "../assets/Logo Paulina Lopez.png"; // Importar la imagen del logo
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +10,10 @@ const NavBar = () => {
     <nav className="bg-gradient-to-r from-teal-500 to-cyan-600 p-4 shadow-lg fixed border-b-2 border-white w-full top-0 left-0 z-50">
       <div className="container mx-auto flex justify-between items-center w-full">
         {/* Logo */}
-        <NavLink to="/">
-          <span className="text-white text-2xl font-semibold tracking-wide uppercase">
-            Paulina Lopez
-          </span>
+        <NavLink to="/" className="flex items-center">
+          <div className="bg-white p-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src={logo} alt="Logo Paulina Lopez" className="h-12 md:h-14" />
+          </div>
         </NavLink>
 
         {/* Menu Button (Mobile) */}
